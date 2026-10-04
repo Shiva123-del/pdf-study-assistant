@@ -1,0 +1,23 @@
+# Secrets — never commit
+.env
+.env.*
+!.env.example
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.Python
+
+# Virtual environments
+venv/
+.venv/
+env/
+
+# Vector store (regenerated on ingest)
+chroma_db/
+
+# OS / editor
+.DS_Store
+.vscode/
+.idea/
