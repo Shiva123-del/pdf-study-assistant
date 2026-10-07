@@ -7,6 +7,9 @@ from the same material.
 Built with Python, LangChain, Chroma and the OpenAI API, in a single Gradio app —
 and **evaluated**, not just demoed (see [Evaluation](#evaluation)).
 
+**Live demo:** https://pdf-study-assistant-5rgb.onrender.com
+*(Free hosting: the first load can take about 30 seconds to wake up, and uploaded books are cleared when the service restarts, so upload a PDF each time.)*
+
 ---
 
 ## Why this is not just another RAG demo
