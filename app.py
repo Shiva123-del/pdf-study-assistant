@@ -59,11 +59,11 @@ DB_DIRECTORY = os.getenv("DB_DIRECTORY", str(BASE_DIR / "chroma_db"))
 COLLECTION_NAME = os.getenv("COLLECTION_NAME", "pdf_knowledge_base")
 
 # --- Chunking -----------------------------------------------------------
-CHUNK_SIZE = int(os.getenv("CHUNK_SIZE", "1000"))
-CHUNK_OVERLAP = int(os.getenv("CHUNK_OVERLAP", "200"))
+CHUNK_SIZE = int(os.getenv("CHUNK_SIZE", "1500"))
+CHUNK_OVERLAP = int(os.getenv("CHUNK_OVERLAP", "300"))
 
 # --- Retrieval / chat ---------------------------------------------------
-ANSWER_TOP_K = int(os.getenv("ANSWER_TOP_K", "5"))
+ANSWER_TOP_K = int(os.getenv("ANSWER_TOP_K", "10"))
 MAX_HISTORY_MESSAGES = 8  # last N chat messages sent to the model
 
 # --- Quiz ---------------------------------------------------------------
