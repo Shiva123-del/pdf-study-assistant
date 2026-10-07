@@ -1,0 +1,50 @@
+{
+  "experiment": "Top-K configuration comparison",
+  "document_id": "fd56aaf80c851e9f3b417745785ea5c832fc2911acfd2094a86f4c517fdf435a",
+  "embedding_model": "text-embedding-3-small",
+  "chunk_size": 1000,
+  "chunk_overlap": 200,
+  "dataset_size": 30,
+  "results": [
+    {
+      "top_k": 1,
+      "chunk_size": 1000,
+      "chunk_overlap": 200,
+      "questions": 30,
+      "recall": 0.7333333333333333,
+      "precision": 0.7333333333333333,
+      "mrr": 0.7333333333333333,
+      "average_retrieval_latency_seconds": 0.6877536513609812
+    },
+    {
+      "top_k": 3,
+      "chunk_size": 1000,
+      "chunk_overlap": 200,
+      "questions": 30,
+      "recall": 0.8666666666666667,
+      "precision": 0.4111111111111111,
+      "mrr": 0.7888888888888889,
+      "average_retrieval_latency_seconds": 0.3860317125295599
+    },
+    {
+      "top_k": 5,
+      "chunk_size": 1000,
+      "chunk_overlap": 200,
+      "questions": 30,
+      "recall": 0.8666666666666667,
+      "precision": 0.25333333333333335,
+      "mrr": 0.7833333333333333,
+      "average_retrieval_latency_seconds": 0.4286302916239947
+    },
+    {
+      "top_k": 10,
+      "chunk_size": 1000,
+      "chunk_overlap": 200,
+      "questions": 30,
+      "recall": 0.9666666666666667,
+      "precision": 0.15333333333333335,
+      "mrr": 0.8177777777777778,
+      "average_retrieval_latency_seconds": 0.42731241942383347
+    }
+  ]
+}

@@ -1,0 +1,807 @@
+[
+  {
+    "id": "q1",
+    "question": "What is an algorithm according to the textbook?",
+    "answer": "According to the textbook, an algorithm is a sequence of steps or instructions that must be followed in a specific order to solve a problem. Algorithms make it possible to describe a solution by writing down the required instructions. Typically, algorithms are executed by computer programs to perform tasks (Source: Introduction_To_Computer_Science_-_WEB.pdf, p. 56).\n\nAdditionally, the textbook states that an algorithm is a sequence of precise instructions that takes any input and computes the corresponding output (Source: Introduction_To_Computer_Science_-_WEB.pdf, p. 108).",
+    "citations": [
+      {
+        "source": "Introduction_To_Computer_Science_-_WEB.pdf",
+        "page": 56
+      },
+      {
+        "source": "Introduction_To_Computer_Science_-_WEB.pdf",
+        "page": 108
+      }
+    ],
+    "evaluation": {
+      "citation_coverage": {
+        "score": 5,
+        "reason": "Both definitions and the related statement about computer programs executing algorithms are directly cited."
+      },
+      "citation_correctness": {
+        "score": 5,
+        "reason": "Page 56 supports the ordered-steps definition and program-execution claim, while page 108 supports the precise-instructions, input-to-output definition."
+      },
+      "citation_completeness": {
+        "score": 5,
+        "reason": "All important factual claims in the answer are adequately supported by the cited pages."
+      },
+      "citation_supported": true,
+      "reason": "The retrieved text on both cited pages directly matches the claims made in the answer."
+    }
+  },
+  {
+    "id": "q2",
+    "question": "How does the binary search algorithm narrow the search interval when searching for a number in a sorted array?",
+    "answer": "The binary search algorithm narrows the search interval by comparing the target number to the middle element of the current range in the sorted array. If the target is less than the middle element, the search interval is narrowed to the lower half. Otherwise, if the target is greater, the search interval is narrowed to the upper half. This process repeats, dividing the search range in half each time until the number is found or the interval becomes empty (Source: Introduction_To_Computer_Science_-_WEB.pdf, p. 20; p. 127).",
+    "citations": [],
+    "evaluation": {
+      "citation_coverage": {
+        "score": 5,
+        "reason": "The citation covers all key claims about comparing the target with the middle element, selecting a half, and repeating until found or empty."
+      },
+      "citation_correctness": {
+        "score": 5,
+        "reason": "Page 20 directly supports the full explanation, while page 127 confirms that comparison with the middle element eliminates half the range repeatedly."
+      },
+      "citation_completeness": {
+        "score": 5,
+        "reason": "All important factual claims in the answer are adequately supported by the cited pages."
+      },
+      "citation_supported": true,
+      "reason": "The cited source pages, especially page 20, directly substantiate the answer's description of binary search."
+    }
+  },
+  {
+    "id": "q3",
+    "question": "What were the Difference Engine and Analytical Engine developed by Charles Babbage, and what role did Ada Lovelace play in the Analytical Engine?",
+    "answer": "The Difference Engine, developed by Charles Babbage in the 1820s, was designed to prevent human errors in manual calculations by automating the calculation of polynomial functions and astronomical calculations. It essentially served as a mechanical calculator for these specific types of calculations.\n\nFollowing the Difference Engine, Babbage invented the Analytical Engine, which was more advanced and program-controlled. The Analytical Engine included features such as an integrated memory and an arithmetic logic unit, allowing it to perform a wider range of calculations than the Difference Engine. Ada Lovelace played a crucial role in the development of the Analytical Engine by assisting Babbage and creating sequencing instructions using punched cards. These instructions enabled the Analytical Engine to automatically perform calculations according to the programming code, effectively making it an early programmable computer (Source: Introduction_To_Computer_Science_-_WEB.pdf, p. 21).",
+    "citations": [
+      {
+        "source": "Introduction_To_Computer_Science_-_WEB.pdf",
+        "page": 21
+      }
+    ],
+    "evaluation": {
+      "citation_coverage": {
+        "score": 5,
+        "reason": "The single citation is placed after the discussion and covers all major claims about both engines and Ada Lovelace's role."
+      },
+      "citation_correctness": {
+        "score": 4,
+        "reason": "Page 21 directly supports the dates, purposes, program control, memory, arithmetic logic unit, and Lovelace's punched-card instructions. Describing the Difference Engine as mechanical and the Analytical Engine as an early programmable computer is reasonable but not explicitly stated in the excerpt."
+      },
+      "citation_completeness": {
+        "score": 5,
+        "reason": "All important factual claims are adequately addressed by the cited page, with only minor interpretive characterizations extending beyond its exact wording."
+      },
+      "citation_supported": true,
+      "reason": "The cited page substantively supports the answer's central account of the Difference Engine, Analytical Engine, and Ada Lovelace's contribution."
+    }
+  },
+  {
+    "id": "q4",
+    "question": "What is dynamic programming, and how did Richard Bellman use it to solve complex problems?",
+    "answer": "Dynamic programming is a mathematical optimization methodology and a technique for computer programming invented by Richard Bellman in 1953. It involves dividing complex problems into more manageable subproblems, solving each subproblem independently, and storing their results. These stored solutions are then used to solve the overall complex problem efficiently. This approach helps in managing and solving complicated problems by breaking them down into simpler parts (subproblems) and reusing the solutions of these parts, which avoids redundant calculations and reduces computational effort (Source: Introduction_To_Computer_Science_-_WEB.pdf, p. 22).",
+    "citations": [
+      {
+        "source": "Introduction_To_Computer_Science_-_WEB.pdf",
+        "page": 22
+      }
+    ],
+    "evaluation": {
+      "citation_coverage": {
+        "score": 5,
+        "reason": "The single citation is placed after the full explanation and covers all major factual claims in the answer."
+      },
+      "citation_correctness": {
+        "score": 4,
+        "reason": "Page 22 explicitly supports Bellman's 1953 invention, the definition of dynamic programming, and dividing, solving, and storing subproblem results. Avoiding redundant calculations and reducing computational effort are reasonable implications but are not stated explicitly."
+      },
+      "citation_completeness": {
+        "score": 4,
+        "reason": "The important claims are adequately supported, though the statements about independent solution, reuse, and reduced computational effort receive only indirect support."
+      },
+      "citation_supported": true,
+      "reason": "The cited page directly supports the answer's central claims about what dynamic programming is and how Bellman used it, with only minor explanatory elaboration beyond the page's wording."
+    }
+  },
+  {
+    "id": "q5",
+    "question": "How did George E. Forsythe define computer science?",
+    "answer": "George E. Forsythe defined computer science as \"the theory of programming, numerical analysis, data processing, and the design of computer systems.\" He emphasized that computer science is distinguished from other disciplines by its focus on algorithms, which are essential for effective computer programming (Source: Introduction_To_Computer_Science_-_WEB.pdf, p. 22).",
+    "citations": [
+      {
+        "source": "Introduction_To_Computer_Science_-_WEB.pdf",
+        "page": 22
+      }
+    ],
+    "evaluation": {
+      "citation_coverage": {
+        "score": 5,
+        "reason": "The citation covers both the quoted definition and Forsythe's emphasis on algorithms."
+      },
+      "citation_correctness": {
+        "score": 5,
+        "reason": "Page 22 explicitly states the quoted definition and says algorithms distinguish computer science and are essential for effective programming."
+      },
+      "citation_completeness": {
+        "score": 5,
+        "reason": "All important factual claims in the answer are adequately supported by the cited page."
+      },
+      "citation_supported": true,
+      "reason": "The retrieved context from page 22 directly supports every substantive claim in the answer."
+    }
+  },
+  {
+    "id": "q6",
+    "question": "What are the four components of computer hardware described in the textbook?",
+    "answer": "The four components of computer hardware described in the textbook are:\n\n1. Processor (CPU) - the computer's brain that executes instructions and includes the ALU, registers, memory controller, and cache memory.\n2. Memory - the storage area for data and instructions.\n3. Storage - the hardware that permanently houses a computer’s data.\n4. Input/Output (I/O) devices - devices such as keyboards, mice, screens, and speakers that allow interaction with the computer (Source: Introduction_To_Computer_Science_-_WEB.pdf, p. 203, 206, 207).",
+    "citations": [],
+    "evaluation": {
+      "citation_coverage": {
+        "score": 5,
+        "reason": "The parenthetical citation is attached to the full list and therefore covers all four component claims and their descriptions."
+      },
+      "citation_correctness": {
+        "score": 4,
+        "reason": "Page 203 explicitly lists processors, memory, storage, and input/output devices; page 206 supports the CPU internals; and page 207 supports I/O interaction. However, the claim that storage permanently houses data appears on page 23, which was not cited, and the memory definition is not explicit on the cited pages."
+      },
+      "citation_completeness": {
+        "score": 4,
+        "reason": "The central claim identifying the four components is fully supported, and most elaborations are supported, but the specific storage and memory definitions lack direct support from the cited pages."
+      },
+      "citation_supported": false,
+      "reason": "The cited pages support the four-component list and most details, but not every factual description; notably, the permanent-storage definition is supported by uncited page 23 rather than pages 203, 206, or 207."
+    }
+  },
+  {
+    "id": "q7",
+    "question": "What was the ENIAC, and why is it notable in computer history?",
+    "answer": "The ENIAC, or Electronic Numerical Integrator and Computer, was completed in 1945 and is one of the earliest digital computers. It used vacuum tube technology, where vacuum tubes acted like memory by representing binary values: off for 0 and on for 1. ENIAC is notable in computer history as the first general-purpose computer, meaning it could run any program specified by a programmer, rather than just a single dedicated program. This general-purpose capability marked a fundamental similarity with modern computers despite its age and hardware differences (Source: Introduction_To_Computer_Science_-_WEB.pdf, p. 23).",
+    "citations": [
+      {
+        "source": "Introduction_To_Computer_Science_-_WEB.pdf",
+        "page": 23
+      }
+    ],
+    "evaluation": {
+      "citation_coverage": {
+        "score": 5,
+        "reason": "The citation covers all important factual claims about ENIAC's name, completion date, technology, operation, and historical significance."
+      },
+      "citation_correctness": {
+        "score": 5,
+        "reason": "Page 23 explicitly supports that ENIAC was completed in 1945, was an early digital computer, used vacuum tubes to represent 0 and 1, and was the first general-purpose computer."
+      },
+      "citation_completeness": {
+        "score": 5,
+        "reason": "All substantive claims in the answer are adequately supported by the cited page, including the comparison with modern computers."
+      },
+      "citation_supported": true,
+      "reason": "The cited page directly and comprehensively supports the answer's factual claims."
+    }
+  },
+  {
+    "id": "q8",
+    "question": "What does it mean for a computer to be Turing-complete?",
+    "answer": "A computer is considered Turing-complete if it can store data in memory and manipulate that data through a program that can run any algorithm. This means the computer shares the fundamental model for computing results as formalized by Alan Turing's concept of a Turing machine. In essence, a Turing-complete computer can run any computational algorithm given sufficient memory and time, using instructions written in a programming language (Source: Introduction_To_Computer_Science_-_WEB.pdf, p. 24).",
+    "citations": [
+      {
+        "source": "Introduction_To_Computer_Science_-_WEB.pdf",
+        "page": 24
+      }
+    ],
+    "evaluation": {
+      "citation_coverage": {
+        "score": 5,
+        "reason": "The citation covers all important factual claims in the answer."
+      },
+      "citation_correctness": {
+        "score": 5,
+        "reason": "Page 24 explicitly describes a Turing-complete computer as storing and manipulating data according to programs, sharing a fundamental computational model, and being able to run any algorithm."
+      },
+      "citation_completeness": {
+        "score": 5,
+        "reason": "The single citation adequately supports the full explanation, including the references to Turing machines, algorithms, memory, programs, and programming-language instructions."
+      },
+      "citation_supported": true,
+      "reason": "The cited page directly supports the answer's definition and associated factual claims."
+    }
+  },
+  {
+    "id": "q9",
+    "question": "What are the three perspectives on computer science discussed in the textbook?",
+    "answer": "The three perspectives on computer science discussed in the textbook are the hardware perspective, software perspective, and theoretical perspective. These perspectives emphasize different aspects of computation and are often centered in undergraduate computer science (Source: Introduction_To_Computer_Science_-_WEB.pdf, p. 44).",
+    "citations": [
+      {
+        "source": "Introduction_To_Computer_Science_-_WEB.pdf",
+        "page": 44
+      }
+    ],
+    "evaluation": {
+      "citation_coverage": {
+        "score": 5,
+        "reason": "The citation covers both the identification of the three perspectives and the statement about their emphasis and role in undergraduate computer science."
+      },
+      "citation_correctness": {
+        "score": 5,
+        "reason": "Page 44 explicitly names the hardware, software, and theoretical perspectives and states that they emphasize different aspects of computation and are often centered in undergraduate computer science."
+      },
+      "citation_completeness": {
+        "score": 5,
+        "reason": "All important factual claims in the answer are fully supported by the cited page."
+      },
+      "citation_supported": true,
+      "reason": "The retrieved content from page 44 directly and fully supports the generated answer."
+    }
+  },
+  {
+    "id": "q10",
+    "question": "What is data science, and why has it become important for large datasets?",
+    "answer": "Data science is an interdisciplinary field that applies computing to managing and extracting information from data. It involves combining computing and data analysis skills with domain knowledge specific to a field or business. Data scientists use machine learning methods and various data management techniques to analyze data, often very large datasets called big data that cannot be easily processed using traditional tools like spreadsheets (Source: Introduction_To_Computer_Science_-_WEB.pdf, p. 31).\n\nData science has become important for large datasets because big data involves very large volumes of data, often with high velocity, variety, veracity, and value (the five Vs). These datasets are complex and difficult to handle with traditional databases and storage, requiring advanced analysis and new software and hardware solutions. Data scientists help make sense of these large datasets by gathering, preprocessing, and applying machine learning algorithms to discover trends, patterns, and make predictions, which improves business decisions and product quality (Source: Introduction_To_Computer_Science_-_WEB.pdf, pp. 31, 376, 412-413).",
+    "citations": [
+      {
+        "source": "Introduction_To_Computer_Science_-_WEB.pdf",
+        "page": 31
+      }
+    ],
+    "evaluation": {
+      "citation_coverage": {
+        "score": 2,
+        "reason": "The extracted citation covers the definition of data science and the difficulty of processing big data with spreadsheets, but not several detailed claims in the second paragraph."
+      },
+      "citation_correctness": {
+        "score": 4,
+        "reason": "Page 31 directly supports the interdisciplinary definition, the combination of computing, analysis, and domain knowledge, the use of machine learning, and the importance of data science for very large datasets."
+      },
+      "citation_completeness": {
+        "score": 2,
+        "reason": "The sole extracted citation does not substantiate the five Vs, limitations of traditional databases and storage, preprocessing responsibilities, or improvements to decisions and product quality."
+      },
+      "citation_supported": false,
+      "reason": "Page 31 supports the answer's central definition and basic importance claim, but it does not support all factual details attributed to the citations."
+    }
+  },
+  {
+    "id": "q11",
+    "question": "What is computational thinking according to the textbook?",
+    "answer": "According to the textbook, computational thinking is the problem-solving and cognitive process rooted in computer science principles. It involves breaking down complex problems into smaller, more manageable parts and devising systematic approaches to solve them. It is not just programming, but the mental process of formulating problems so their solutions can be represented as computational steps and algorithms. Computational thinking includes abstraction, generalization, modeling, and measurement, aiming to produce innovative and optimal solutions through the use of data structures, algorithms, design patterns, and abstract data types. It empowers one to determine what instructions to give to a computer, rather than just writing the instructions themselves (Introduction_To_Computer_Science_-_WEB.pdf, pp. 49-51, 59).",
+    "citations": [],
+    "evaluation": {
+      "citation_coverage": {
+        "score": 5,
+        "reason": "The combined citation covers the answer's key claims about problem decomposition, systematic solution design, computational representation, abstraction, algorithms, and the distinction from programming."
+      },
+      "citation_correctness": {
+        "score": 5,
+        "reason": "Pages 49-51 and 59 directly support the stated definition and characteristics of computational thinking, including innovation, data structures and algorithms, abstraction and modeling, and determining computer instructions."
+      },
+      "citation_completeness": {
+        "score": 5,
+        "reason": "All important factual claims are supported by the cited page range, even though they are consolidated into one citation at the end."
+      },
+      "citation_supported": true,
+      "reason": "The retrieved content from the cited pages substantively supports the full answer."
+    }
+  },
+  {
+    "id": "q12",
+    "question": "What is decomposition in computational thinking?",
+    "answer": "Decomposition in computational thinking is the process of solving a complex problem by breaking it down into smaller, more manageable tasks. This allows consideration of various essential components and redefines the complex task into simpler problems that are easier to handle. For example, in making a jam sandwich, decomposition involves identifying the required ingredients and steps needed to complete the task (Source: Introduction_To_Computer_Science_-_WEB.pdf, p. 54).\n\nAdditionally, decomposition helps analyze and solve problems more effectively by breaking them into parts and understanding how these parts relate to one another, which is a key part of computational thinking (Source: Introduction_To_Computer_Science_-_WEB.pdf, pp. 52, 92).",
+    "citations": [
+      {
+        "source": "Introduction_To_Computer_Science_-_WEB.pdf",
+        "page": 54
+      }
+    ],
+    "evaluation": {
+      "citation_coverage": {
+        "score": 5,
+        "reason": "The definition, benefits, and jam sandwich example are all accompanied by relevant citations."
+      },
+      "citation_correctness": {
+        "score": 5,
+        "reason": "Page 54 directly supports the definition and example, while pages 52 and 92 support decomposition as a problem-solving method involving smaller related parts."
+      },
+      "citation_completeness": {
+        "score": 5,
+        "reason": "All important factual claims in the answer are adequately supported by the cited pages."
+      },
+      "citation_supported": true,
+      "reason": "The retrieved context directly substantiates the answer's definition, explanation, and example of decomposition."
+    }
+  },
+  {
+    "id": "q13",
+    "question": "What is pattern recognition in computational thinking?",
+    "answer": "Pattern recognition in computational thinking is the process of logically organizing and analyzing data to identify patterns and trends. It involves structuring information in a way that facilitates effective problem-solving by recognizing recurring elements or behaviors. This process often requires logical thinking such as inductive or deductive reasoning to move from specific examples to general principles (Source: Introduction_To_Computer_Science_-_WEB.pdf, p. 52; p. 54).",
+    "citations": [],
+    "evaluation": {
+      "citation_coverage": {
+        "score": 5,
+        "reason": "The citation is attached to all major claims defining pattern recognition and describing the reasoning it involves."
+      },
+      "citation_correctness": {
+        "score": 5,
+        "reason": "Page 52 directly describes pattern recognition as logically organizing and analyzing data for effective problem-solving, while page 54 supports the use of inductive and deductive reasoning and movement from specific examples to general principles."
+      },
+      "citation_completeness": {
+        "score": 5,
+        "reason": "The cited pages collectively support the definition, problem-solving role, and logical-reasoning aspects presented in the answer."
+      },
+      "citation_supported": true,
+      "reason": "The cited pages substantively support the answer's factual claims about pattern recognition in computational thinking."
+    }
+  },
+  {
+    "id": "q14",
+    "question": "What is abstraction in computational thinking?",
+    "answer": "Abstraction in computational thinking is a technique that focuses on identifying and pulling out the important details while ignoring less relevant information. It helps simplify complex problems by creating models or representations that highlight key aspects and principles applicable to other problems or situations. For example, abstraction involves forming a clear idea or model of the desired outcome, such as drawing a picture representing the final appearance of a jam sandwich to simplify and clarify the problem (Source: Introduction_To_Computer_Science_-_WEB.pdf, p. 55). Additionally, abstraction enables programming at higher levels by allowing developers to use more understandable and efficient notations instead of low-level machine language (Source: Introduction_To_Computer_Science_-_WEB.pdf, p. 310).",
+    "citations": [
+      {
+        "source": "Introduction_To_Computer_Science_-_WEB.pdf",
+        "page": 55
+      },
+      {
+        "source": "Introduction_To_Computer_Science_-_WEB.pdf",
+        "page": 310
+      }
+    ],
+    "evaluation": {
+      "citation_coverage": {
+        "score": 5,
+        "reason": "All important claims about abstraction, modeling, the jam sandwich example, and higher-level programming are cited."
+      },
+      "citation_correctness": {
+        "score": 5,
+        "reason": "Page 55 directly supports focusing on important details, applying general principles, and using a jam sandwich model; page 310 supports using abstraction to program with English-like syntax rather than machine language."
+      },
+      "citation_completeness": {
+        "score": 5,
+        "reason": "The citations adequately support the answer's definition, example, and programming-related explanation."
+      },
+      "citation_supported": true,
+      "reason": "Both cited pages directly substantiate the factual claims associated with them."
+    }
+  },
+  {
+    "id": "q15",
+    "question": "What are the three As of computational thinking?",
+    "answer": "The three As of computational thinking are:\n\n1. Abstraction: The initial step involves problem formulation.\n2. Automation: The next phase focuses on expressing the solution.\n3. Analysis: The final phase encompasses solution execution and evaluation.\n\nThese three As illustrate the power of computational thinking (Source: Introduction_To_Computer_Science_-_WEB.pdf, p. 52).",
+    "citations": [
+      {
+        "source": "Introduction_To_Computer_Science_-_WEB.pdf",
+        "page": 52
+      }
+    ],
+    "evaluation": {
+      "citation_coverage": {
+        "score": 5,
+        "reason": "The citation covers the three named concepts and the descriptions of each phase."
+      },
+      "citation_correctness": {
+        "score": 5,
+        "reason": "Page 52 explicitly identifies abstraction, automation, and analysis as the three As and provides descriptions matching the answer."
+      },
+      "citation_completeness": {
+        "score": 5,
+        "reason": "All important factual claims in the answer are supported by the cited page."
+      },
+      "citation_supported": true,
+      "reason": "The cited page directly and fully supports the answer's identification and explanation of the three As of computational thinking."
+    }
+  },
+  {
+    "id": "q16",
+    "question": "What is the difference between pseudocode and a flowchart?",
+    "answer": "The difference between pseudocode and a flowchart is that pseudocode is a combination of language and high-level programming concepts shown in a clearly ordered, written structure, whereas a flowchart visually shows the flow and direction of decisions using a diagram. Pseudocode lists each step in text form, while a flowchart provides a visual outline of the process, particularly focusing on decision-making (Source: Introduction_To_Computer_Science_-_WEB.pdf, p. 56).",
+    "citations": [
+      {
+        "source": "Introduction_To_Computer_Science_-_WEB.pdf",
+        "page": 56
+      }
+    ],
+    "evaluation": {
+      "citation_coverage": {
+        "score": 5,
+        "reason": "The citation covers all important claims distinguishing pseudocode from flowcharts."
+      },
+      "citation_correctness": {
+        "score": 5,
+        "reason": "Page 56 explicitly describes pseudocode as an ordered written structure combining language and high-level programming concepts, and a flowchart as a visual diagram showing the flow and direction of decisions."
+      },
+      "citation_completeness": {
+        "score": 5,
+        "reason": "The single citation adequately supports every substantive factual statement in the answer."
+      },
+      "citation_supported": true,
+      "reason": "The cited page directly supports the answer's full comparison of pseudocode and flowcharts."
+    }
+  },
+  {
+    "id": "q17",
+    "question": "What is recursion, and why is a base case necessary in a recursive process?",
+    "answer": "Recursion is a programming process where a function calls itself with modified input parameters to solve repetitive tasks by breaking a problem down into smaller subcomponents, each representing a scaled-down version of the original problem. This approach reduces the amount of code needed compared to lengthy iterative loops (Source: Introduction_To_Computer_Science_-_WEB.pdf, p. 57-58).\n\nA base case is necessary in recursion to terminate the recursive calls and prevent infinite loops or stack overflow errors. The base case defines a condition under which the recursion stops, ensuring the process does not call itself indefinitely. For example, in a recursive function summing numbers, the base case could be when the input is zero, at which point the recursion ends and the function returns a value directly (Source: Introduction_To_Computer_Science_-_WEB.pdf, p. 58).",
+    "citations": [
+      {
+        "source": "Introduction_To_Computer_Science_-_WEB.pdf",
+        "page": 58
+      }
+    ],
+    "evaluation": {
+      "citation_coverage": {
+        "score": 4,
+        "reason": "Both the definition of recursion and the explanation of the base case are accompanied by citations."
+      },
+      "citation_correctness": {
+        "score": 3,
+        "reason": "Page 58 supports breaking a problem into scaled-down subproblems and provides the recursiveSum example with x == 0 as a base case. However, it does not explicitly support the claims about reducing code or preventing infinite loops and stack overflow."
+      },
+      "citation_completeness": {
+        "score": 3,
+        "reason": "The central concepts and example are supported, but important rationale about termination, infinite recursion, stack overflow, and reduced code depends on page 57 rather than the extracted page 58 citation."
+      },
+      "citation_supported": false,
+      "reason": "The cited page partially supports the answer, especially the recursive decomposition and zero base-case example, but it does not substantiate all of the answer's factual claims."
+    }
+  },
+  {
+    "id": "q18",
+    "question": "What is the purpose of testing and debugging in computational thinking?",
+    "answer": "The purpose of testing and debugging in computational thinking is to ensure the correctness and reliability of algorithms used to solve problems. Testing is essential for uncovering errors within the step-by-step instructions or algorithms, while debugging involves identifying and fixing these issues or defects (bugs) in the code or process to make them behave as expected. This helps in locating sources of problems and correcting them, which is crucial since mistakes are part of the learning process. Effective testing and debugging ultimately improve the accuracy and functionality of the solution (Source: Introduction_To_Computer_Science_-_WEB.pdf, p. 53, p. 60).",
+    "citations": [],
+    "evaluation": {
+      "citation_coverage": {
+        "score": 5,
+        "reason": "The citation covers the answer's key claims about testing uncovering errors, debugging locating and fixing defects, and mistakes contributing to learning."
+      },
+      "citation_correctness": {
+        "score": 5,
+        "reason": "Pages 53 and 60 directly support the descriptions of testing and debugging and their role in making algorithms and processes behave as expected."
+      },
+      "citation_completeness": {
+        "score": 5,
+        "reason": "All important factual claims are adequately supported by the cited pages; the statements about improved correctness and functionality are reasonable summaries of the source."
+      },
+      "citation_supported": true,
+      "reason": "The cited pages substantively support the full answer: page 53 defines testing and debugging, while page 60 explains finding and correcting defects so algorithms behave as expected and discusses mistakes as part of learning."
+    }
+  },
+  {
+    "id": "q19",
+    "question": "What is adaptive design reuse, and how does it differ from the bottom-up approach of computational thinking?",
+    "answer": "Adaptive design reuse is a top-down methodology for designing business solutions by creating and assembling existing design components with minimal modifications. These components are reusable elements in a larger system, serving specific purposes. This approach, often called computing in the large, focuses on reusing and adapting complete components to build solutions rather than creating everything from scratch (Source: Introduction_To_Computer_Science_-_WEB.pdf, p. 62).\n\nIn contrast, computational thinking typically employs a bottom-up strategy, focusing on crafting well-structured low-level components, such as algorithms and individual instructions, to build up solutions (Source: Introduction_To_Computer_Science_-_WEB.pdf, p. 62).\n\nThus, the key difference is that adaptive design reuse uses a top-down approach emphasizing assembly and adaptation of existing components, while computational thinking uses a bottom-up approach starting with individual, basic building blocks to create solutions (Source: Introduction_To_Computer_Science_-_WEB.pdf, p. 62).",
+    "citations": [
+      {
+        "source": "Introduction_To_Computer_Science_-_WEB.pdf",
+        "page": 62
+      },
+      {
+        "source": "Introduction_To_Computer_Science_-_WEB.pdf",
+        "page": 62
+      },
+      {
+        "source": "Introduction_To_Computer_Science_-_WEB.pdf",
+        "page": 62
+      }
+    ],
+    "evaluation": {
+      "citation_coverage": {
+        "score": 5,
+        "reason": "All important factual claims about adaptive design reuse, computational thinking, and their top-down versus bottom-up distinction are cited."
+      },
+      "citation_correctness": {
+        "score": 5,
+        "reason": "Page 62 directly supports the description of adaptive design reuse as top-down, component-based, and minimally modifying reusable elements, while describing computational thinking as bottom-up."
+      },
+      "citation_completeness": {
+        "score": 5,
+        "reason": "The cited page adequately supports the answer's definition, comparison, and concluding distinction."
+      },
+      "citation_supported": true,
+      "reason": "The retrieved content from page 62 directly substantiates the answer's central factual claims and terminology."
+    }
+  },
+  {
+    "id": "q20",
+    "question": "What are the three main layers commonly used in a layered business solution architecture?",
+    "answer": "The three main layers commonly used in a layered business solution architecture are:\n\n1. Presentation Layer: This layer serves as the user's touchpoint, handling the user interface (UI) and delivering the overall user experience (UX).\n\n2. Business Logic Layer: This layer contains the business logic of the solution or application, separating the UI/UX from business-centric computations and allowing flexibility for evolving business operations.\n\n3. Data Management Layer: This layer is responsible for interacting with persistent storage systems like databases and various data processing mechanisms, managing the application's data needs (Source: Introduction_To_Computer_Science_-_WEB.pdf, p. 64).",
+    "citations": [
+      {
+        "source": "Introduction_To_Computer_Science_-_WEB.pdf",
+        "page": 64
+      }
+    ],
+    "evaluation": {
+      "citation_coverage": {
+        "score": 5,
+        "reason": "The citation is attached to the full list and descriptions, covering all important factual claims."
+      },
+      "citation_correctness": {
+        "score": 5,
+        "reason": "Page 64 explicitly identifies the presentation, business logic, and data management layers and supports each description."
+      },
+      "citation_completeness": {
+        "score": 5,
+        "reason": "All substantive claims about the three layers and their roles are adequately supported by the cited page."
+      },
+      "citation_supported": true,
+      "reason": "The cited page directly and comprehensively supports the generated answer."
+    }
+  },
+  {
+    "id": "q21",
+    "question": "What is a data structure, and what are its two important parts?",
+    "answer": "A data structure is a way to represent complex data by focusing on the data itself and the operations to be performed on it. It is chosen after selecting an appropriate abstract data type and considering the resource constraints such as program running time for each operation. The two important parts of a data structure are the data itself and the operations that can be performed on that data (Source: Introduction_To_Computer_Science_-_WEB.pdf, p. 102).",
+    "citations": [
+      {
+        "source": "Introduction_To_Computer_Science_-_WEB.pdf",
+        "page": 102
+      }
+    ],
+    "evaluation": {
+      "citation_coverage": {
+        "score": 5,
+        "reason": "The citation covers the definition, selection process, resource constraints, and the two important parts."
+      },
+      "citation_correctness": {
+        "score": 5,
+        "reason": "Page 102 states that data structures are selected after an abstract data type, based on resource constraints, and that the primary concerns are the data and operations performed on them."
+      },
+      "citation_completeness": {
+        "score": 5,
+        "reason": "All important factual claims in the answer are adequately supported by the cited page."
+      },
+      "citation_supported": true,
+      "reason": "The cited context directly supports the answer's characterization of a data structure and identifies data and operations as its two central parts."
+    }
+  },
+  {
+    "id": "q22",
+    "question": "What is an abstract data type (ADT)?",
+    "answer": "An abstract data type (ADT) consists of all data structures that share common functionality but differ in specific representation. ADTs categorize data structures based on their functionality without considering how they are specifically implemented (Source: Introduction_To_Computer_Science_-_WEB.pdf, p. 101).",
+    "citations": [
+      {
+        "source": "Introduction_To_Computer_Science_-_WEB.pdf",
+        "page": 101
+      }
+    ],
+    "evaluation": {
+      "citation_coverage": {
+        "score": 5,
+        "reason": "The single citation covers both the definition of an ADT and the related explanation about categorizing data structures by functionality rather than representation."
+      },
+      "citation_correctness": {
+        "score": 5,
+        "reason": "Page 101 explicitly states that an ADT consists of data structures sharing common functionality but differing in representation, directly supporting the answer."
+      },
+      "citation_completeness": {
+        "score": 5,
+        "reason": "All important factual claims in the answer are adequately supported by the cited page."
+      },
+      "citation_supported": true,
+      "reason": "The generated answer closely matches the retrieved text from the cited source and page."
+    }
+  },
+  {
+    "id": "q23",
+    "question": "What is the difference between a list and a set as abstract data types?",
+    "answer": "The difference between a list and a set as abstract data types is as follows:\n\n- A **list** represents an ordered sequence of elements and allows adding, retrieving, and removing elements from any position in the list. Lists are indexed, so elements can be accessed by their position in the list. For example, a list can represent tasks in chronological order (Source: Introduction_To_Computer_Science_-_WEB.pdf, p. 101).\n\n- A **set** represents an unordered collection of unique elements. It allows adding, retrieving, and removing elements but does not maintain any order or indexing. Sets only contain unique elements and generally offer less functionality than lists, which allows for more efficient data structure representations (Source: Introduction_To_Computer_Science_-_WEB.pdf, pp. 101-102).\n\nIn summary, the key differences are that lists have order and indexing, while sets are unordered and contain unique elements only.",
+    "citations": [
+      {
+        "source": "Introduction_To_Computer_Science_-_WEB.pdf",
+        "page": 101
+      }
+    ],
+    "evaluation": {
+      "citation_coverage": {
+        "score": 5,
+        "reason": "The citations cover the key claims about list ordering and indexing, set uniqueness and lack of order, supported operations, and relative functionality and efficiency."
+      },
+      "citation_correctness": {
+        "score": 5,
+        "reason": "Page 101 directly states that lists are ordered and indexed and that sets are unordered collections of unique elements with fewer operations enabling more efficient representations."
+      },
+      "citation_completeness": {
+        "score": 5,
+        "reason": "All important factual distinctions are supported; the uncited summary only repeats claims already cited in the two bullets."
+      },
+      "citation_supported": true,
+      "reason": "The retrieved text on page 101 supports the answer's substantive claims about both list and set abstract data types."
+    }
+  },
+  {
+    "id": "q24",
+    "question": "What is the difference between an array list and a linked list?",
+    "answer": "The difference between an array list and a linked list lies primarily in how elements are stored and accessed:\n\n1. Array list:\n- Stores elements next to each other in contiguous memory locations in the exact list order.\n- Allows random access to every element in the list in a single step.\n- Does not support fast insertion and deletion operations efficiently.\n\n2. Linked list:\n- Does not store elements next to each other but maintains, for each element, a link (reference) to the next element in the list.\n- Supports only sequential access to elements.\n- Supports fast insertion and deletion operations.\n\nThus, array lists provide efficient random access but slow insertions/deletions, whereas linked lists provide efficient insertions/deletions but only sequential access (Source: Introduction_To_Computer_Science_-_WEB.pdf, p. 102).",
+    "citations": [
+      {
+        "source": "Introduction_To_Computer_Science_-_WEB.pdf",
+        "page": 102
+      }
+    ],
+    "evaluation": {
+      "citation_coverage": {
+        "score": 5,
+        "reason": "The citation covers all important claims about storage layout, access patterns, and insertion/deletion performance."
+      },
+      "citation_correctness": {
+        "score": 5,
+        "reason": "Page 102 directly states that array lists store elements next to each other, allow single-step random access, and lack the fast insertion and deletion supported by linked lists, which use links and sequential access."
+      },
+      "citation_completeness": {
+        "score": 5,
+        "reason": "All substantive factual comparisons in the answer are adequately supported by the cited page."
+      },
+      "citation_supported": true,
+      "reason": "The cited page directly supports the answer's full comparison of array lists and linked lists."
+    }
+  },
+  {
+    "id": "q25",
+    "question": "What is a tree data structure, and how is its hierarchy organized?",
+    "answer": "A tree data structure is a hierarchical data structure consisting of nodes that represent elements. Each node may have zero or more descendant nodes known as child nodes. The node connected directly above a child is called the parent node. This hierarchy starts from a root node at the top and continues down through various levels of descendants until reaching leaf nodes at the bottom, which have no children. The height of the tree corresponds to the depth of this hierarchy of descendants. The organization and relationships in the tree are maintained through these parent-child connections (Source: Introduction_To_Computer_Science_-_WEB.pdf, p. 103).",
+    "citations": [
+      {
+        "source": "Introduction_To_Computer_Science_-_WEB.pdf",
+        "page": 103
+      }
+    ],
+    "evaluation": {
+      "citation_coverage": {
+        "score": 5,
+        "reason": "The single citation covers all important factual claims about nodes, children, parents, the root, leaves, hierarchy, and tree height."
+      },
+      "citation_correctness": {
+        "score": 5,
+        "reason": "Page 103 directly states that a tree is hierarchical, nodes represent elements, nodes can have descendant child nodes, and parent-child relationships extend from the root to childless leaves."
+      },
+      "citation_completeness": {
+        "score": 5,
+        "reason": "All substantive claims in the answer are adequately supported by the cited page, including the statement that height corresponds to the depth of the descendant hierarchy."
+      },
+      "citation_supported": true,
+      "reason": "The cited page directly and comprehensively supports the answer's description of a tree data structure and its hierarchical organization."
+    }
+  },
+  {
+    "id": "q26",
+    "question": "What properties define a binary search tree?",
+    "answer": "A binary search tree is defined by two main properties:\n\n1. **Binary tree property**: Each node can have zero, one, or two children.\n\n2. **Search tree property**: The elements in the tree are organized so that for each node, the values of all elements in the left subtree are less than the value of the node, and the values of all elements in the right subtree are greater than the value of the node. This property ensures that when elements are read from left to right (in-order traversal), they appear in sorted order (from least to greatest) (Source: Introduction_To_Computer_Science_-_WEB.pdf, p. 103).",
+    "citations": [
+      {
+        "source": "Introduction_To_Computer_Science_-_WEB.pdf",
+        "page": 103
+      }
+    ],
+    "evaluation": {
+      "citation_coverage": {
+        "score": 5,
+        "reason": "The single citation covers both defining properties and the in-order sorted-order consequence."
+      },
+      "citation_correctness": {
+        "score": 5,
+        "reason": "Page 103 explicitly states the binary tree property, the left-less/right-greater search tree property, and that left-to-right reading yields sorted order."
+      },
+      "citation_completeness": {
+        "score": 5,
+        "reason": "All important factual claims in the answer are supported by the cited page."
+      },
+      "citation_supported": true,
+      "reason": "The cited page directly and fully supports the answer's description of a binary search tree."
+    }
+  },
+  {
+    "id": "q27",
+    "question": "What is a binary heap, and why is it commonly used to implement a priority queue?",
+    "answer": "A binary heap is a type of binary tree data structure used primarily to implement the priority queue abstract data type. It is a hybrid between a binary tree and an array list: data is stored as an array in memory but visualized as a binary tree for easier understanding of storage and manipulation. The binary heap maintains the \"heap property,\" which requires that the priority value of each node is greater than or equal to the priority values of its children. This property ensures that the highest-priority element is always at the root node, making it efficient to access (Source: Introduction_To_Computer_Science_-_WEB.pdf, p. 105).\n\nBecause the highest-priority element is always at the root, operations such as finding or removing the highest-priority element are efficient. Furthermore, the runtime of most binary heap priority queue operations is O(log N), where N is the size of the priority queue, due to the height of the binary heap structure (Source: Introduction_To_Computer_Science_-_WEB.pdf, p. 149).\n\nIn summary, a binary heap is commonly used to implement a priority queue because it allows efficient access to the highest-priority element and supports priority queue operations with logarithmic time complexity.",
+    "citations": [
+      {
+        "source": "Introduction_To_Computer_Science_-_WEB.pdf",
+        "page": 105
+      },
+      {
+        "source": "Introduction_To_Computer_Science_-_WEB.pdf",
+        "page": 149
+      }
+    ],
+    "evaluation": {
+      "citation_coverage": {
+        "score": 5,
+        "reason": "All important claims about the heap structure, heap property, root access, common use for priority queues, and logarithmic operation costs are cited."
+      },
+      "citation_correctness": {
+        "score": 5,
+        "reason": "Page 105 directly supports the definition, array/tree representation, heap property, and efficient root access; page 149 directly supports the O(log N) runtime for most operations due to heap height."
+      },
+      "citation_completeness": {
+        "score": 5,
+        "reason": "The citations adequately support the answer's substantive factual claims and overall explanation."
+      },
+      "citation_supported": true,
+      "reason": "The cited pages directly substantiate the claims associated with them."
+    }
+  },
+  {
+    "id": "q28",
+    "question": "What is algorithmic problem-solving, and what is its goal?",
+    "answer": "Algorithmic problem-solving is the approach of finding an \"efficient\" solution to a problem, typically measured in terms of execution time (such as the number of computer instructions) or space used (such as computer memory size). It emphasizes formally specifying the problem or task with specific input and output data corresponding to each input. The goal of algorithmic problem-solving, as opposed to purely mathematical problem-solving, is to design solutions that are efficient and suitable for computation (Source: Introduction_To_Computer_Science_-_WEB.pdf, p. 108).",
+    "citations": [
+      {
+        "source": "Introduction_To_Computer_Science_-_WEB.pdf",
+        "page": 108
+      }
+    ],
+    "evaluation": {
+      "citation_coverage": {
+        "score": 5,
+        "reason": "The citation covers the answer's key claims about efficiency, execution time, space usage, and formal input-output specification."
+      },
+      "citation_correctness": {
+        "score": 5,
+        "reason": "Page 108 directly states that algorithmic problem-solving aims to find an efficient solution in terms of time or space and emphasizes formally specified inputs and outputs."
+      },
+      "citation_completeness": {
+        "score": 5,
+        "reason": "All important factual claims in the answer are adequately supported by the cited page."
+      },
+      "citation_supported": true,
+      "reason": "The cited page directly supports the answer's description and stated goal of algorithmic problem-solving."
+    }
+  },
+  {
+    "id": "q29",
+    "question": "What is the difference between sequential search and binary search?",
+    "answer": "The difference between sequential search and binary search lies in their approach and efficiency:\n\n- **Sequential Search:** This algorithm checks each element in the collection one by one to find the target element. It does not require the list to be sorted. Its runtime complexity is O(N), where N is the number of elements, because in the worst case, every element may be checked (Source: Introduction_To_Computer_Science_-_WEB.pdf, p. 127).\n\n- **Binary Search:** This algorithm works only on sorted lists and narrows down the possible locations of the target element by repeatedly dividing the search interval in half. It has a logarithmic runtime complexity of O(log N), since each step eliminates half of the remaining elements from consideration (Source: Introduction_To_Computer_Science_-_WEB.pdf, pp. 127, 119).\n\nIn summary, sequential search checks elements in order without requiring sorting and is slower for large lists, whereas binary search requires a sorted list and is faster due to its halving strategy.",
+    "citations": [
+      {
+        "source": "Introduction_To_Computer_Science_-_WEB.pdf",
+        "page": 127
+      }
+    ],
+    "evaluation": {
+      "citation_coverage": {
+        "score": 5,
+        "reason": "The answer places citations after both major algorithm descriptions, covering the important factual claims."
+      },
+      "citation_correctness": {
+        "score": 4,
+        "reason": "Page 127 directly supports element-by-element sequential search, O(N) runtime, and binary search narrowing locations in a sorted list, but it does not explicitly state O(log N), elimination of half per step, or that sequential search requires no sorting."
+      },
+      "citation_completeness": {
+        "score": 3,
+        "reason": "The central comparison is supported, but several important details are not established by the extracted cited page, particularly binary search's O(log N) complexity and halving behavior."
+      },
+      "citation_supported": false,
+      "reason": "The cited page supports most of the core distinction, but not every factual claim attributed to it."
+    }
+  },
+  {
+    "id": "q30",
+    "question": "What is Big O notation, and what does O(1), O(N), and O(log N) represent?",
+    "answer": "Big O notation is a mathematical notation that formally defines the order of growth of an algorithm, most commonly used in computer science to measure the worst-case complexity of algorithms as the size of the input increases (Source: Introduction_To_Computer_Science_-_WEB.pdf, p. 138).\n\nSpecifically:\n- O(1), or constant time complexity, represents an algorithm that takes the same amount of time regardless of the size of the input.\n- O(N), or linear time complexity, represents an algorithm whose running time increases linearly with the size of the input N.\n- O(log N), or logarithmic time complexity, represents an algorithm whose running time increases logarithmically as the input size N increases, meaning that doubling the input size only increases the running time by a constant increment (Source: Introduction_To_Computer_Science_-_WEB.pdf, p. 118; p. 119).\n\nIn summary, O(1) is constant time, O(N) is linear time, and O(log N) is logarithmic time in the context of algorithm growth rates.",
+    "citations": [
+      {
+        "source": "Introduction_To_Computer_Science_-_WEB.pdf",
+        "page": 138
+      }
+    ],
+    "evaluation": {
+      "citation_coverage": {
+        "score": 3,
+        "reason": "Page 138 cites the general definition of Big O, but the extracted citation does not cover the specific explanations of O(1), O(N), and O(log N)."
+      },
+      "citation_correctness": {
+        "score": 5,
+        "reason": "Page 138 directly describes asymptotic notation as defining order of growth and Big O as the common notation used to measure worst-case complexity."
+      },
+      "citation_completeness": {
+        "score": 3,
+        "reason": "The general Big O claim is supported, but the important claims defining constant, linear, and logarithmic complexity are not supported by the extracted citation."
+      },
+      "citation_supported": true,
+      "reason": "The cited page supports the general definition associated with it, although citation support for the specific complexity classes is incomplete."
+    }
+  }
+]

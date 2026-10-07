@@ -1,0 +1,57 @@
+{
+  "experiment": "Chunk size and overlap comparison at Top-K = 10",
+  "pdf": "/Users/shivamthegoat/Desktop/Introduction_To_Computer_Science_-_WEB.pdf",
+  "embedding_model": "text-embedding-3-small",
+  "top_k": 10,
+  "dataset_size": 30,
+  "configurations": [
+    {
+      "configuration": "500_100",
+      "chunk_size": 500,
+      "chunk_overlap": 100,
+      "top_k": 10,
+      "number_of_chunks": 6340,
+      "dataset_size": 30,
+      "embedding_model": "text-embedding-3-small",
+      "embedding_time_seconds": 65.8019075000193,
+      "recall": 0.9333333333333333,
+      "precision": 0.23333333333333334,
+      "mrr": 0.8280952380952381,
+      "average_latency_seconds": 0.43292946403768534,
+      "median_latency_seconds": 0.39846822898834944,
+      "p95_latency_seconds": 0.5963996250648052
+    },
+    {
+      "configuration": "1000_200",
+      "chunk_size": 1000,
+      "chunk_overlap": 200,
+      "top_k": 10,
+      "number_of_chunks": 3397,
+      "dataset_size": 30,
+      "embedding_model": "text-embedding-3-small",
+      "embedding_time_seconds": 38.483339666971005,
+      "recall": 0.9333333333333333,
+      "precision": 0.15,
+      "mrr": 0.8083333333333333,
+      "average_latency_seconds": 0.46967924303996067,
+      "median_latency_seconds": 0.4099290000158362,
+      "p95_latency_seconds": 0.9132399579975754
+    },
+    {
+      "configuration": "1500_300",
+      "chunk_size": 1500,
+      "chunk_overlap": 300,
+      "top_k": 10,
+      "number_of_chunks": 2349,
+      "dataset_size": 30,
+      "embedding_model": "text-embedding-3-small",
+      "embedding_time_seconds": 27.67354087496642,
+      "recall": 0.9333333333333333,
+      "precision": 0.15333333333333335,
+      "mrr": 0.8416666666666667,
+      "average_latency_seconds": 0.43004036392473305,
+      "median_latency_seconds": 0.4109498540055938,
+      "p95_latency_seconds": 0.60743341606576
+    }
+  ]
+}

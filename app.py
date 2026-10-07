@@ -1215,11 +1215,11 @@ def launch_kwargs() -> dict:
 
 def main() -> None:
     parser = argparse.ArgumentParser(description="RAG PDF Knowledge Assistant")
-    parser.add_argument("--host", default="127.0.0.1", help="Use 0.0.0.0 to allow other devices on your network.")
+    parser.add_argument("--host", default="0.0.0.0", help="Host address for deployment.")
     parser.add_argument(
         "--port",
         type=int,
-        default=None,
+        default=int(os.getenv("PORT", "7860")),
         help="Port to use. By default Gradio takes the first free port from 7860 upwards.",
     )
     parser.add_argument("--share", action="store_true", help="Create a temporary public HTTPS link.")

@@ -1,0 +1,365 @@
+{
+  "configuration": {
+    "llm_model": "gpt-4.1-mini",
+    "embedding_model": "text-embedding-3-small",
+    "top_k": 5
+  },
+  "summary": {
+    "questions": 30,
+    "retrieval_latency": {
+      "average_seconds": 0.4754340305458754,
+      "median_seconds": 0.35190522897755727,
+      "p95_seconds": 0.83252474834444
+    },
+    "generation_latency": {
+      "average_seconds": 1.458459090294006,
+      "median_seconds": 1.397581145458389,
+      "p95_seconds": 1.9163011897006066
+    },
+    "total_latency": {
+      "average_seconds": 1.9338931208398813,
+      "median_seconds": 1.8237708334927447,
+      "p95_seconds": 2.773932801460612
+    },
+    "tokens": {
+      "average_input_tokens": 1052.7666666666667,
+      "average_output_tokens": 83.1,
+      "average_total_tokens": 1135.8666666666666,
+      "total_input_tokens": 31583,
+      "total_output_tokens": 2493,
+      "total_tokens": 34076
+    }
+  },
+  "results": [
+    {
+      "id": "q1",
+      "question": "What is an algorithm according to the textbook?",
+      "retrieval_latency_seconds": 2.3703402910614386,
+      "generation_latency_seconds": 1.6004409160232171,
+      "total_latency_seconds": 3.9707812070846558,
+      "retrieved_chunks": 5,
+      "input_tokens": 923,
+      "output_tokens": 59,
+      "total_tokens": 982
+    },
+    {
+      "id": "q2",
+      "question": "How does the binary search algorithm narrow the search interval when searching for a number in a sorted array?",
+      "retrieval_latency_seconds": 0.8236814589472488,
+      "generation_latency_seconds": 1.409381665987894,
+      "total_latency_seconds": 2.2330631249351427,
+      "retrieved_chunks": 5,
+      "input_tokens": 1100,
+      "output_tokens": 85,
+      "total_tokens": 1185
+    },
+    {
+      "id": "q3",
+      "question": "What were the Difference Engine and Analytical Engine developed by Charles Babbage, and what role did Ada Lovelace play in the Analytical Engine?",
+      "retrieval_latency_seconds": 0.31878400000277907,
+      "generation_latency_seconds": 1.6850267089903355,
+      "total_latency_seconds": 2.0038107089931145,
+      "retrieved_chunks": 5,
+      "input_tokens": 1285,
+      "output_tokens": 98,
+      "total_tokens": 1383
+    },
+    {
+      "id": "q4",
+      "question": "What is dynamic programming, and how did Richard Bellman use it to solve complex problems?",
+      "retrieval_latency_seconds": 0.3779688330832869,
+      "generation_latency_seconds": 1.7197675419738516,
+      "total_latency_seconds": 2.0977363750571385,
+      "retrieved_chunks": 5,
+      "input_tokens": 1089,
+      "output_tokens": 89,
+      "total_tokens": 1178
+    },
+    {
+      "id": "q5",
+      "question": "How did George E. Forsythe define computer science?",
+      "retrieval_latency_seconds": 0.7302515000337735,
+      "generation_latency_seconds": 1.0921841249801219,
+      "total_latency_seconds": 1.8224356250138953,
+      "retrieved_chunks": 5,
+      "input_tokens": 831,
+      "output_tokens": 50,
+      "total_tokens": 881
+    },
+    {
+      "id": "q6",
+      "question": "What are the four components of computer hardware described in the textbook?",
+      "retrieval_latency_seconds": 0.3669696249999106,
+      "generation_latency_seconds": 1.4951099590398371,
+      "total_latency_seconds": 1.8620795840397477,
+      "retrieved_chunks": 5,
+      "input_tokens": 1118,
+      "output_tokens": 104,
+      "total_tokens": 1222
+    },
+    {
+      "id": "q7",
+      "question": "What was the ENIAC, and why is it notable in computer history?",
+      "retrieval_latency_seconds": 0.3181312090018764,
+      "generation_latency_seconds": 1.3451043750392273,
+      "total_latency_seconds": 1.6632355840411037,
+      "retrieved_chunks": 5,
+      "input_tokens": 977,
+      "output_tokens": 80,
+      "total_tokens": 1057
+    },
+    {
+      "id": "q8",
+      "question": "What does it mean for a computer to be Turing-complete?",
+      "retrieval_latency_seconds": 0.3486718750791624,
+      "generation_latency_seconds": 1.2634888329776004,
+      "total_latency_seconds": 1.6121607080567628,
+      "retrieved_chunks": 5,
+      "input_tokens": 1038,
+      "output_tokens": 72,
+      "total_tokens": 1110
+    },
+    {
+      "id": "q9",
+      "question": "What are the three perspectives on computer science discussed in the textbook?",
+      "retrieval_latency_seconds": 0.37543904199264944,
+      "generation_latency_seconds": 0.9541904169600457,
+      "total_latency_seconds": 1.3296294589526951,
+      "retrieved_chunks": 5,
+      "input_tokens": 985,
+      "output_tokens": 38,
+      "total_tokens": 1023
+    },
+    {
+      "id": "q10",
+      "question": "What is data science, and why has it become important for large datasets?",
+      "retrieval_latency_seconds": 0.32612687500659376,
+      "generation_latency_seconds": 1.5899779580067843,
+      "total_latency_seconds": 1.916104833013378,
+      "retrieved_chunks": 5,
+      "input_tokens": 1112,
+      "output_tokens": 97,
+      "total_tokens": 1209
+    },
+    {
+      "id": "q11",
+      "question": "What is computational thinking according to the textbook?",
+      "retrieval_latency_seconds": 0.33956220804248005,
+      "generation_latency_seconds": 1.4071704159723595,
+      "total_latency_seconds": 1.7467326240148395,
+      "retrieved_chunks": 5,
+      "input_tokens": 980,
+      "output_tokens": 113,
+      "total_tokens": 1093
+    },
+    {
+      "id": "q12",
+      "question": "What is decomposition in computational thinking?",
+      "retrieval_latency_seconds": 0.3923921670066193,
+      "generation_latency_seconds": 1.4327138749649748,
+      "total_latency_seconds": 1.825106041971594,
+      "retrieved_chunks": 5,
+      "input_tokens": 954,
+      "output_tokens": 65,
+      "total_tokens": 1019
+    },
+    {
+      "id": "q13",
+      "question": "What is pattern recognition in computational thinking?",
+      "retrieval_latency_seconds": 0.3501199170714244,
+      "generation_latency_seconds": 1.3323672499973327,
+      "total_latency_seconds": 1.6824871670687571,
+      "retrieved_chunks": 5,
+      "input_tokens": 922,
+      "output_tokens": 70,
+      "total_tokens": 992
+    },
+    {
+      "id": "q14",
+      "question": "What is abstraction in computational thinking?",
+      "retrieval_latency_seconds": 0.33798733400180936,
+      "generation_latency_seconds": 1.5045419589150697,
+      "total_latency_seconds": 1.842529292916879,
+      "retrieved_chunks": 5,
+      "input_tokens": 863,
+      "output_tokens": 87,
+      "total_tokens": 950
+    },
+    {
+      "id": "q15",
+      "question": "What are the three As of computational thinking?",
+      "retrieval_latency_seconds": 0.3628976250765845,
+      "generation_latency_seconds": 1.283523374935612,
+      "total_latency_seconds": 1.6464210000121966,
+      "retrieved_chunks": 5,
+      "input_tokens": 981,
+      "output_tokens": 46,
+      "total_tokens": 1027
+    },
+    {
+      "id": "q16",
+      "question": "What is the difference between pseudocode and a flowchart?",
+      "retrieval_latency_seconds": 0.3435017910087481,
+      "generation_latency_seconds": 2.0040234579937533,
+      "total_latency_seconds": 2.3475252490025014,
+      "retrieved_chunks": 5,
+      "input_tokens": 1120,
+      "output_tokens": 88,
+      "total_tokens": 1208
+    },
+    {
+      "id": "q17",
+      "question": "What is recursion, and why is a base case necessary in a recursive process?",
+      "retrieval_latency_seconds": 0.34648604108951986,
+      "generation_latency_seconds": 1.2999602080089971,
+      "total_latency_seconds": 1.646446249098517,
+      "retrieved_chunks": 5,
+      "input_tokens": 953,
+      "output_tokens": 69,
+      "total_tokens": 1022
+    },
+    {
+      "id": "q18",
+      "question": "What is the purpose of testing and debugging in computational thinking?",
+      "retrieval_latency_seconds": 0.33875183295458555,
+      "generation_latency_seconds": 1.2866456249030307,
+      "total_latency_seconds": 1.6253974578576162,
+      "retrieved_chunks": 5,
+      "input_tokens": 985,
+      "output_tokens": 65,
+      "total_tokens": 1050
+    },
+    {
+      "id": "q19",
+      "question": "What is adaptive design reuse, and how does it differ from the bottom-up approach of computational thinking?",
+      "retrieval_latency_seconds": 0.839760166942142,
+      "generation_latency_seconds": 1.4158688749885187,
+      "total_latency_seconds": 2.2556290419306606,
+      "retrieved_chunks": 5,
+      "input_tokens": 1022,
+      "output_tokens": 111,
+      "total_tokens": 1133
+    },
+    {
+      "id": "q20",
+      "question": "What are the three main layers commonly used in a layered business solution architecture?",
+      "retrieval_latency_seconds": 0.3504128330387175,
+      "generation_latency_seconds": 1.1828410000307485,
+      "total_latency_seconds": 1.533253833069466,
+      "retrieved_chunks": 5,
+      "input_tokens": 992,
+      "output_tokens": 69,
+      "total_tokens": 1061
+    },
+    {
+      "id": "q21",
+      "question": "What is a data structure, and what are its two important parts?",
+      "retrieval_latency_seconds": 0.3236827499931678,
+      "generation_latency_seconds": 1.3879918749444187,
+      "total_latency_seconds": 1.7116746249375865,
+      "retrieved_chunks": 5,
+      "input_tokens": 1096,
+      "output_tokens": 33,
+      "total_tokens": 1129
+    },
+    {
+      "id": "q22",
+      "question": "What is an abstract data type (ADT)?",
+      "retrieval_latency_seconds": 0.5577245000749826,
+      "generation_latency_seconds": 1.1246195420389995,
+      "total_latency_seconds": 1.6823440421139821,
+      "retrieved_chunks": 5,
+      "input_tokens": 1274,
+      "output_tokens": 78,
+      "total_tokens": 1352
+    },
+    {
+      "id": "q23",
+      "question": "What is the difference between a list and a set as abstract data types?",
+      "retrieval_latency_seconds": 0.31944383296649903,
+      "generation_latency_seconds": 1.5095564170042053,
+      "total_latency_seconds": 1.8290002499707043,
+      "retrieved_chunks": 5,
+      "input_tokens": 1030,
+      "output_tokens": 113,
+      "total_tokens": 1143
+    },
+    {
+      "id": "q24",
+      "question": "What is the difference between an array list and a linked list?",
+      "retrieval_latency_seconds": 0.35339762491639704,
+      "generation_latency_seconds": 1.3583416250767186,
+      "total_latency_seconds": 1.7117392499931157,
+      "retrieved_chunks": 5,
+      "input_tokens": 1241,
+      "output_tokens": 88,
+      "total_tokens": 1329
+    },
+    {
+      "id": "q25",
+      "question": "What is a tree data structure, and how is its hierarchy organized?",
+      "retrieval_latency_seconds": 0.3760601249523461,
+      "generation_latency_seconds": 1.244046707986854,
+      "total_latency_seconds": 1.6201068329392,
+      "retrieved_chunks": 5,
+      "input_tokens": 1159,
+      "output_tokens": 78,
+      "total_tokens": 1237
+    },
+    {
+      "id": "q26",
+      "question": "What properties define a binary search tree?",
+      "retrieval_latency_seconds": 0.37033645797055215,
+      "generation_latency_seconds": 2.7524752500467002,
+      "total_latency_seconds": 3.1228117080172524,
+      "retrieved_chunks": 5,
+      "input_tokens": 1151,
+      "output_tokens": 86,
+      "total_tokens": 1237
+    },
+    {
+      "id": "q27",
+      "question": "What is a binary heap, and why is it commonly used to implement a priority queue?",
+      "retrieval_latency_seconds": 0.5010131249437109,
+      "generation_latency_seconds": 1.3870682090055197,
+      "total_latency_seconds": 1.8880813339492306,
+      "retrieved_chunks": 5,
+      "input_tokens": 1080,
+      "output_tokens": 129,
+      "total_tokens": 1209
+    },
+    {
+      "id": "q28",
+      "question": "What is algorithmic problem-solving, and what is its goal?",
+      "retrieval_latency_seconds": 0.341238500084728,
+      "generation_latency_seconds": 1.2498704999452457,
+      "total_latency_seconds": 1.5911090000299737,
+      "retrieved_chunks": 5,
+      "input_tokens": 1042,
+      "output_tokens": 63,
+      "total_tokens": 1105
+    },
+    {
+      "id": "q29",
+      "question": "What is the difference between sequential search and binary search?",
+      "retrieval_latency_seconds": 0.3384259579470381,
+      "generation_latency_seconds": 1.8090850840089843,
+      "total_latency_seconds": 2.1475110419560224,
+      "retrieved_chunks": 5,
+      "input_tokens": 1047,
+      "output_tokens": 123,
+      "total_tokens": 1170
+    },
+    {
+      "id": "q30",
+      "question": "What is Big O notation, and what does O(1), O(N), and O(log N) represent?",
+      "retrieval_latency_seconds": 0.4234614170854911,
+      "generation_latency_seconds": 1.6263889580732211,
+      "total_latency_seconds": 2.0498503751587123,
+      "retrieved_chunks": 5,
+      "input_tokens": 1233,
+      "output_tokens": 147,
+      "total_tokens": 1380
+    }
+  ]
+}

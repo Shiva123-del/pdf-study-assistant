@@ -1,0 +1,154 @@
+[
+  {
+    "id": "q1",
+    "question": "What is an algorithm according to the textbook?",
+    "relevant_pages": [20]
+  },
+  {
+    "id": "q2",
+    "question": "How does the binary search algorithm narrow the search interval when searching for a number in a sorted array?",
+    "relevant_pages": [20]
+  },
+  {
+    "id": "q3",
+    "question": "What were the Difference Engine and Analytical Engine developed by Charles Babbage, and what role did Ada Lovelace play in the Analytical Engine?",
+    "relevant_pages": [21]
+  },
+  {
+    "id": "q4",
+    "question": "What is dynamic programming, and how did Richard Bellman use it to solve complex problems?",
+    "relevant_pages": [22]
+  },
+  {
+    "id": "q5",
+    "question": "How did George E. Forsythe define computer science?",
+    "relevant_pages": [22]
+  },
+  {
+    "id": "q6",
+    "question": "What are the four components of computer hardware described in the textbook?",
+    "relevant_pages": [23]
+  },
+  {
+    "id": "q7",
+    "question": "What was the ENIAC, and why is it notable in computer history?",
+    "relevant_pages": [23]
+  },
+  {
+    "id": "q8",
+    "question": "What does it mean for a computer to be Turing-complete?",
+    "relevant_pages": [24]
+  },
+  {
+    "id": "q9",
+    "question": "What are the three perspectives on computer science discussed in the textbook?",
+    "relevant_pages": [24]
+  },
+  {
+    "id": "q10",
+    "question": "What is data science, and why has it become important for large datasets?",
+    "relevant_pages": [31]
+  },
+
+  {
+    "id": "q11",
+    "question": "What is computational thinking according to the textbook?",
+    "relevant_pages": [50, 51]
+  },
+  {
+    "id": "q12",
+    "question": "What is decomposition in computational thinking?",
+    "relevant_pages": [52, 53]
+  },
+  {
+    "id": "q13",
+    "question": "What is pattern recognition in computational thinking?",
+    "relevant_pages": [52, 54]
+  },
+  {
+    "id": "q14",
+    "question": "What is abstraction in computational thinking?",
+    "relevant_pages": [52, 55]
+  },
+  {
+    "id": "q15",
+    "question": "What are the three As of computational thinking?",
+    "relevant_pages": [52]
+  },
+  {
+    "id": "q16",
+    "question": "What is the difference between pseudocode and a flowchart?",
+    "relevant_pages": [56]
+  },
+  {
+    "id": "q17",
+    "question": "What is recursion, and why is a base case necessary in a recursive process?",
+    "relevant_pages": [57, 58, 59]
+  },
+  {
+    "id": "q18",
+    "question": "What is the purpose of testing and debugging in computational thinking?",
+    "relevant_pages": [60]
+  },
+  {
+    "id": "q19",
+    "question": "What is adaptive design reuse, and how does it differ from the bottom-up approach of computational thinking?",
+    "relevant_pages": [62]
+  },
+  {
+    "id": "q20",
+    "question": "What are the three main layers commonly used in a layered business solution architecture?",
+    "relevant_pages": [64]
+  },
+
+  {
+    "id": "q21",
+    "question": "What is a data structure, and what are its two important parts?",
+    "relevant_pages": [100]
+  },
+  {
+    "id": "q22",
+    "question": "What is an abstract data type (ADT)?",
+    "relevant_pages": [101]
+  },
+  {
+    "id": "q23",
+    "question": "What is the difference between a list and a set as abstract data types?",
+    "relevant_pages": [101]
+  },
+  {
+    "id": "q24",
+    "question": "What is the difference between an array list and a linked list?",
+    "relevant_pages": [102]
+  },
+  {
+    "id": "q25",
+    "question": "What is a tree data structure, and how is its hierarchy organized?",
+    "relevant_pages": [103]
+  },
+  {
+    "id": "q26",
+    "question": "What properties define a binary search tree?",
+    "relevant_pages": [103, 104]
+  },
+  {
+    "id": "q27",
+    "question": "What is a binary heap, and why is it commonly used to implement a priority queue?",
+    "relevant_pages": [105]
+  },
+  {
+    "id": "q28",
+    "question": "What is algorithmic problem-solving, and what is its goal?",
+    "relevant_pages": [108]
+  },
+  {
+    "id": "q29",
+    "question": "What is the difference between sequential search and binary search?",
+    "relevant_pages": [110, 111]
+  },
+  {
+    "id": "q30",
+    "question": "What is Big O notation, and what does O(1), O(N), and O(log N) represent?",
+    "relevant_pages": [118, 119]
+  }
+]
