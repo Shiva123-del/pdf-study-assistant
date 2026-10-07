@@ -87,67 +87,120 @@ reads/writes/deletes, and `lru_cache` singletons for the vector store and chat m
 
 ## Evaluation
 
-The retrieval settings above were **chosen from measurements**, not guessed. The
-benchmark is 30 questions written from the OpenStax *Introduction to Computer
-Science* textbook, each labelled with the page that holds the answer. All scripts and
-raw results are in [`evaluation/`](evaluation/). **Full write-up: [evaluation/REPORT.pdf](evaluation/REPORT.pdf)** (3 pages, plain-language).
+The settings above were **chosen from measurements**, not guessed. Everything below comes from the scripts and raw result files in [`evaluation/`](evaluation/), and the full write-up is in **[evaluation/REPORT.pdf](evaluation/REPORT.pdf)** (6 pages).
 
-### Choosing chunk size and K
+**The benchmark.** 30 questions written from the OpenStax *Introduction to Computer Science* textbook, each labelled with the page(s) that hold the answer (39 page labels, 8 questions with more than one correct page). An independent, stronger LLM (GPT-5.6-sol) judges answers and citations, so the system never grades its own work.
 
-Nine settings were compared (3 chunk sizes × K = 3, 5, 10). At K = 10:
+### Headline results
 
-| Chunk / overlap | Recall@10 | Precision@10 | MRR | Chunks in book |
+| | Result |
+|---|---|
+| Chosen setup | chunk 1500 / overlap 300 / K=10 |
+| Retrieval | Recall@10 93.33%, MRR 84.17% (best at every K), 63% fewer chunks than 500/100 |
+| Answer quality (independent judge, 1-5) | faithfulness 4.73, relevancy 4.97, correctness 4.87 |
+| Citation test | 26 of 30 answers fully supported; 23 of 30 perfect (5/5/5) |
+| Robustness | 8 of 8 passed (average 4.88 / 5) |
+| Speed (chosen setup, 16 questions) | about 3.0 s per question, 2.7x the input tokens of K=5 |
+
+### 1. Retrieval: coverage versus precision
+
+Retrieving more passages finds the answer more often but returns more irrelevant text. First benchmark run (chunk 1000 / overlap 200):
+
+| K | Recall | Precision | MRR |
+|---|---|---|---|
+| 1 | 73.33% | 73.33% | 73.33% |
+| 3 | 86.67% | 41.11% | 78.89% |
+| 5 | 86.67% | 25.33% | 78.33% |
+| 10 | 96.67% | 15.33% | 81.78% |
+
+The trade-off is accepted on purpose: the model can ignore a passage it does not need, but cannot use one that was never retrieved.
+
+### 2. Choosing chunk size and K (9 settings, one run)
+
+| Chunk / overlap | K | Recall | Precision | MRR |
 |---|---|---|---|---|
-| 500 / 100 | 93.33% | 23.33% | 82.81% | 6,340 |
-| 1000 / 200 | 93.33% | 15.00% | 80.83% | 3,397 |
-| **1500 / 300** | **93.33%** | **15.33%** | **84.17%** | **2,349** |
+| 500 / 100 | 3 | 80.00% | 46.67% | 78.33% |
+| 1000 / 200 | 3 | 83.33% | 40.00% | 77.22% |
+| 1500 / 300 | 3 | 86.67% | 38.89% | 82.78% |
+| 500 / 100 | 5 | 86.67% | 33.33% | 80.83% |
+| 1000 / 200 | 5 | 86.67% | 25.33% | 78.89% |
+| 1500 / 300 | 5 | 86.67% | 25.33% | 82.50% |
+| 500 / 100 | 10 | 93.33% | 23.33% | 82.81% |
+| 1000 / 200 | 10 | 93.33% | 15.00% | 80.83% |
+| **1500 / 300** | **10** | **93.33%** | **15.33%** | **84.17%** |
 
-- **1500 / 300 ranks the right page highest at every K** (best MRR) and produces 63%
-  fewer chunks than 500 / 100, so a book indexes roughly twice as fast.
-- Recall rises with K (86.67% at K = 3 → 93.33% at K = 10) while page-based precision
-  falls (38.89% → 15.33%). That trade-off is accepted on purpose: the model can
-  ignore a passage it does not need, but cannot use one that was never retrieved.
-- 500 / 100 has the best precision at every K, so it is the better choice if keeping
-  irrelevant text out matters more than ranking.
-
-### Answer quality, citations, robustness
-
-An independent, stronger LLM judged generated answers on a 1–5 scale:
-
-| Metric | Full run (1000/200, K=5, 30/30) | Selected setup (1500/300, K=10, 16/30)* |
+| Chunk / overlap | Chunks in the book | Indexing time |
 |---|---|---|
-| Faithfulness | 4.73 | 4.75 |
-| Answer relevancy | 4.97 | 5.00 |
-| Correctness | 4.87 | 4.81 |
+| 500 / 100 | 6,340 | ~66 s |
+| 1000 / 200 | 3,397 | ~38 s |
+| **1500 / 300** | **2,349** | **~28 s** |
 
-- **Citations:** 26 of 30 answers had fully supported citations. The main failure is
-  *over-extension* — a correct answer that adds a detail the cited page does not state.
-- **Robustness:** 8 of 8 tests passed (rephrasing, typos, short and long queries,
-  out-of-document questions, prompt injection, time-sensitive questions).
-- **Latency:** 1.93 s average end to end (measured at K = 5; not re-measured at K = 10).
+1500/300 ranks the right page best at every K and indexes about twice as fast. 500/100 has the best precision at every K, so it is the better choice if keeping irrelevant text out matters most. The first run above and this comparison disagree by exactly one question for the same 1000/200 setting (96.67% vs 93.33% recall at K=10); choices are made inside one run, which is internally consistent.
 
-\* The run for the selected setup stopped at 16 of 30 questions when API credit ran
-out, so it is shown for reference and is not treated as a finished benchmark.
+### 3. Answer quality
+
+| Run | Judge | Faithfulness | Relevancy | Correctness |
+|---|---|---|---|---|
+| 1000/200, K=5 (30/30), first run | GPT-4.1-mini (same model that wrote the answers) | 5.00 | 5.00 | 5.00 |
+| 1000/200, K=5 (30/30) | GPT-5.6-sol | 4.73 | 4.97 | 4.87 |
+| 1500/300, K=10 (16/30) | GPT-5.6-sol | 4.75 | 5.00 | 4.81 |
+
+The first run let the generating model grade its own answers and gave a perfect score on all 30, which is why it was replaced by an independent judge. On the same first 16 questions the two setups are within a few hundredths of each other (faithfulness 4.81 vs 4.75, correctness 4.94 vs 4.81), so there is no sign that K=10 hurts quality. The run for the chosen setup stopped at 16 of 30 questions when API credit ran out, so it is **not** treated as a finished benchmark. Every point lost was the same kind of error: a broadly correct answer adding a reasonable detail the retrieved text does not state.
+
+### 4. Citation test
+
+For each of the 30 answers, the judge read the question, the answer, the extracted citations and the retrieved text, and decided whether the cited pages really support the claims (it was told not to compare against the labelled pages).
+
+| Metric | Mean (1-5) | Score 5 | Score 4 | Score 3 | Score 2 or below |
+|---|---|---|---|---|---|
+| Coverage | 4.80 | 27 | 1 | 1 | 1 |
+| Correctness | 4.77 | 24 | 5 | 1 | 0 |
+| Completeness | 4.63 | 24 | 2 | 3 | 1 |
+
+- **26 of 30 answers (86.67%)** had fully supported citations; **23 of 30** scored 5 on all three metrics. The 30 answers averaged 98 words and cited 22 distinct pages.
+- **The 4 answers that were not fully supported** (q6 hardware components, q10 data science, q17 recursion, q29 sequential vs binary search) share one failure: *evidence over-extension*, a correct answer that includes a detail its cited page does not state. Correct is not the same as backed by the source.
+- **A limitation of the test itself:** the script only recognises citations written as `(Source: file, p. N)`. Five answers cited several pages in one bracket (e.g. `p. 20; p. 127`), so the script extracted zero citations for them, although the judge still saw the full answer. The extracted-citation count is therefore an undercount.
+
+### 5. Robustness (8 of 8 passed, average 4.88 / 5)
+
+Rephrased, misspelled, one-word and long multi-part questions all scored 5/5. Both out-of-document questions ("capital of France", "CEO of Microsoft") scored 5/5 because the system said the book does not contain the answer instead of inventing one. The prompt-injection attempt to reveal an API key was refused (5/5). "Latest version of Python" scored 4/5: the book mentions Python 3.9.4, and a static document cannot say what is latest today.
+
+### 6. Speed and cost
+
+| | 1000/200, K=5 (30 questions) | 1500/300, K=10 (16 questions) |
+|---|---|---|
+| Retrieval (avg) | 0.48 s | 0.73 s |
+| Generation (avg) | 1.46 s | 2.28 s |
+| Total per question (avg) | 1.93 s | 3.01 s |
+| Input tokens (avg) | 1,053 | 2,873 |
+
+The chosen setup uses about 2.7x the input tokens and 1.6x the time: the price of higher recall, still fast enough for interactive use.
 
 ### What these numbers do not show
 
-- **30 questions is small**: one question is worth 3.33 percentage points, so gaps of a
-  few points between settings are suggestive, not conclusive.
+- **30 questions is small.** One question is worth 3.33 percentage points, so gaps of a few points are suggestive, not conclusive.
+- **The questions cluster in one area.** All labelled pages fall between pages 20 and 119 of a much longer book.
 - **One textbook.** Results may differ on scanned or table-heavy PDFs.
-- **Page-based precision is approximate** — it counts a result as relevant if it comes
-  from the right page, and some page labels were imperfect.
+- **Page-based precision is approximate** (a result counts as relevant if it comes from a labelled page, and some labels were imperfect), so compare settings rather than reading absolute values.
 - **An LLM judged the answers**, not a human audit.
+- **The robustness suite is thin:** one test per category, four of eight on binary search.
 
 ### Reproducing it
 
-The scripts expect the textbook at `~/Desktop/Introduction_To_Computer_Science_-_WEB.pdf`
-(free from OpenStax) and `OPENAI_API_KEY` in `.env`. Each script writes its results
-to `evaluation/`, for example:
+The scripts expect the textbook at `~/Desktop/Introduction_To_Computer_Science_-_WEB.pdf` (free from OpenStax) and `OPENAI_API_KEY` in `.env`. Each script writes its results into `evaluation/`:
+
+| Test | Script |
+|---|---|
+| Retrieval, chunk size x K | `evaluate_configurations.py` |
+| Answer quality (independent judge) | `evaluate_answers_independent.py` |
+| Answer quality, other setups | `evaluate_answer_configurations.py` |
+| Citation test | `evaluate_citations_v2.py` |
+| Robustness | `evaluate_robustness.py` |
+| Latency and tokens | `evaluate_latency.py` |
 
 ```bash
-python evaluation/evaluate_configurations.py   # retrieval: recall / precision / MRR across K
-python evaluation/evaluate_robustness.py       # the 8 robustness tests
-python evaluation/evaluate_latency.py          # retrieval + generation latency
+python evaluation/evaluate_configurations.py
+python evaluation/evaluate_citations_v2.py
 ```
 
 ---
@@ -211,7 +264,8 @@ ingested costs nothing, because of the content-hash check.
   externally-written data.
 - Scanned PDFs are detected but not OCR'd.
 - Next steps from the evaluation: add a reranker after retrieval, verify citations
-  claim by claim, and let the system abstain when the evidence is weak.
+  claim by claim, widen the citation-extraction pattern, finish the full 30-question run
+  for the chosen setup, and expand the benchmark beyond pages 20-119.
 
 ---
 
