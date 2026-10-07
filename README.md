@@ -90,7 +90,7 @@ reads/writes/deletes, and `lru_cache` singletons for the vector store and chat m
 The retrieval settings above were **chosen from measurements**, not guessed. The
 benchmark is 30 questions written from the OpenStax *Introduction to Computer
 Science* textbook, each labelled with the page that holds the answer. All scripts and
-raw results are in [`evaluation/`](evaluation/).
+raw results are in [`evaluation/`](evaluation/). **Full write-up: [evaluation/REPORT.pdf](evaluation/REPORT.pdf)** (3 pages, plain-language).
 
 ### Choosing chunk size and K
 
